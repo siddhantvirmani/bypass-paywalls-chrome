@@ -485,6 +485,12 @@ if (matchDomain('elmercurio.com')) {
   const adBlock = document.getElementById('ad-article-inline');
   const adHeader = document.getElementById('sticky-ad-header');
   removeDOMElement(block, adBlock, adHeader);
+} else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
+  const landingBanner = document.querySelector('.logged-out-landing-banner');
+  const sampleBanner = document.querySelector('.main-sample-banner');
+  const bottomBanner = document.querySelector('.border-bottom-cc');
+  const subscribe = document.querySelector('.subscribe-ad-text');
+  removeDOMElement(landingBanner, sampleBanner, bottomBanner, subscribe);
 }
 
 function matchDomain (domains) {
